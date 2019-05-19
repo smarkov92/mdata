@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Создание запроса на анализ группы {% endblock title %}
+
+{% block body %}
+    <div class="container mw-100">
+        <div>
+            <h2 class="row d-flex justify-content-center align-items-center">Создание запроса на анализ</h2>
+        </div>
+        <div class="row d-flex justify-content-center align-items-center">
+            <form action="/vk_create_request" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+{% endblock body %}

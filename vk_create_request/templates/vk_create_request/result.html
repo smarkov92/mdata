@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Запрос группы {{ id_group }} {% endblock title %}
+
+{% block body %}
+    <div class="container mw-100">
+        <div class="row">
+            <h2 class="d-flex justify-content-center align-items-center">Результат запроса на анализ</h2>
+        </div>
+       <div class="row">
+           <p>Домен группы: {{ id_group }}</p>
+           <p>Проанализированно постов: {{ counts_posts }}</p>
+           <a href="{{ vk_excel_url }}">Ссылка на Excel</a>
+       </div>
+    </div>
+{% endblock body %}
